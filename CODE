@@ -1,0 +1,75 @@
+import java.util.Scanner; 
+
+public class LabProgram{
+
+public static boolean isArrayEven(int[] arrayValues, int arraySize){
+
+   boolean val = true;
+
+   int odd = 0;
+
+   for(int i =0;i<arraySize;i++){
+
+       if(arrayValues[i]%2!=0){
+
+           odd++;}}
+
+   if(odd>0){
+
+       val = false;}
+
+   return val;
+
+}
+
+public static boolean isArrayOdd(int[] arrayValues, int arraySize){
+
+   boolean val = true;
+
+   int even = 0;
+
+   for(int i =0;i<arraySize;i++){
+
+       if(arrayValues[i]%2==0){
+
+           even++;}}
+
+   if(even>0){
+
+       val = false;}
+
+   return val;
+
+}
+
+public static void main(String[] args) {
+
+ Scanner input = new Scanner(System.in);
+
+ int n = input.nextInt();
+
+ int[] array = new int[n];
+
+ for(int i = 0;i<n;i++){
+
+     array[i] = input.nextInt();  }
+
+boolean even = isArrayEven(array,n);
+
+ boolean odd = isArrayOdd(array,n);  
+
+ if(even == true && odd == false){
+
+     System.out.println("all even");  }
+
+ else if(even == false && odd == true){
+
+     System.out.println("all odd");  }
+
+ else{
+
+     System.out.println("not even or odd");  }
+
+}
+
+}
